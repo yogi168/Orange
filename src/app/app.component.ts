@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'orange';
+  myFunction(id) {
+    // $('#' + id).css('border-left', '5px solid yellow');
+    //var val=true;
+    
+    //  $('#' + id).toggleClass('panel-group-yellow');
+    
+ }
 }

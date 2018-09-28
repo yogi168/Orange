@@ -1,0 +1,293 @@
+
+.fullWidth {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+   position: relative;
+  }
+    .box{
+	background-color: #333;
+    height: 150px;
+    width: 110% ;
+	margin-bottom: 10px;  
+  }
+
+  .logo{
+    width:90%;
+    position:absolute;
+    left: 5%;
+    right: 5%;
+    text-align: center;
+    height: 40%;
+    background-color: rgba(253, 194, 0, 0.966);
+    top: 117px;
+    z-index: 20;
+    line-height: 0.8em;
+    word-wrap: break-word;
+  }
+  
+  .bt1{
+	background-color: black;
+  color:white;
+  width: 42%;
+  }
+  
+  .fo,.w{
+	font-weight: bolder;
+	font-size: 190%;
+  }
+  
+  .o{
+	color: rgb(221, 133, 0);
+	font-weight: bolder;
+	font-size: 190%;
+  }
+  
+  .fa,.a{
+	font-size:250%;
+	font-weight: bolder;
+  }
+  
+  .bo{
+	color: rgb(10, 10, 10);
+	font-size: 160%;
+	font-weight: bold;
+  }
+  
+  .fo1{
+	color: rgb(221, 133, 0);
+	font-weight: bolder;
+	font-size: 250%;
+  }
+  
+  .a1{
+	color: rgb(221, 133, 0);
+	line-height: 0.1;
+	font-size: 190%;
+	margin-left: 5%;
+	font-weight: bold;
+  }
+  
+  .a2{
+	color: rgb(250, 245, 243);
+	font-size: 250%;
+    margin-left: 5%;
+    line-height: 0.8;
+  }
+  
+  .fi-lightbulb{
+	font-size: 4.5rem;
+  }
+  .panel-group{
+	text-align:center;
+	width:20em;
+	margin: 0 auto;
+	border-left: 5px solid grey;
+	
+  }
+  
+  .panel-group-yellow{
+  text-align:center;
+	width:20em;
+	margin: 0 auto;
+	border-left: 5px solid rgba(253, 194, 0, 0.966);
+  }
+  span{
+	font-weight: bold;
+  }
+  
+  hr{
+	border-color:grey;
+  }
+  
+  .fullWidth1 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
+    position: relative;
+   }
+
+   .box1{
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+    width: 100%
+    /* margin-bottom: 10px;  */
+    }
+
+    
+  .bt2{
+    background-color: rgb(221, 133, 0);
+    color:white;
+    width: 46%;
+    top: 97%;
+    position:absolute;
+    right: 27%;
+    z-index: 20;
+    }
+
+
+
+
+$size: 100px;
+
+$rating-stroke-width: 2;
+$background-stroke-color: #E9E9E7;
+$green: #81CE97;
+$red: #FF5D00;
+$yellow: #FFE100;
+$walkText: #727272;
+
+
+
+.rating-container {
+  position: relative;
+  .walk-container,
+  .transit-container,
+  .bike-container {
+    height: $size;
+    width: $size;
+    display: inline-block;
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: inset 0 0 2px rgba(0,0,0,.3);
+    margin: 0 5px;
+    a {
+      position: absolute;
+      width: $size;
+      color: #727272;
+      text-decoration: none;
+      border-bottom: none;
+      bottom: $size * .35;
+      right: 0;
+      text-align: center;
+      font-weight: light;
+      font-size: 12px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  svg {
+    height: $size;
+    transform: rotate(-90deg);
+    width: $size;
+    .rating-progress-background {
+      fill: none;
+      stroke: $background-stroke-color;
+      stroke-width: $rating-stroke-width;
+    }
+    .rating-progress {
+      fill: none;
+      stroke: $red;
+      stroke-dasharray: 100 100;
+      stroke-dashoffset: 100;
+      stroke-linecap: square;
+      stroke-width: $rating-stroke-width;
+      transition: all 1.2s cubic-bezier(.99, .01, .62, .94);
+    }
+    .under-50 {
+      stroke: $red;
+    }
+    .under-75 {
+      stroke: $yellow;
+    }
+    .over-75 {
+      stroke: $green;
+    }
+  }
+  #walk-score,
+  #transit-score,
+  #bike-score {
+    position: absolute;
+    width: $size;
+    color: black;
+    bottom: $size * .14;
+    font-size: $size * .17;
+    text-align: center;
+  }
+  .transit-icon .fa,
+  .bike-icon .fa,
+  .walk-icon .fa {
+    position: absolute;
+    bottom: $size * .5;
+    right: 0;
+    width: $size;
+    text-align: center;
+    font-size: 40px;
+  }
+}
+
+
+//for 2nd container
+.rating-container1 {
+    position: relative;
+    .walk-container1,
+    .transit-container1,
+    .bike-container1 {
+      height: $size;
+      width: $size;
+      display: inline-block;
+      position: relative;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: inset 0 0 2px rgba(0,0,0,.3);
+      margin: 0 5px;
+      a {
+        position: absolute;
+        width: $size;
+        color: #727272;
+        text-decoration: none;
+        border-bottom: none;
+        bottom: $size * .35;
+        right: 0;
+        text-align: center;
+        font-weight: light;
+        font-size: 12px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    svg {
+      height: $size;
+      transform: rotate(-90deg);
+      width: $size;
+      .rating-progress-background1 {
+        fill: none;
+        stroke: $background-stroke-color;
+        stroke-width: $rating-stroke-width;
+      }
+      .rating-progress1 {
+        fill: none;
+        stroke: $red;
+        stroke-dasharray: 100 100;
+        stroke-dashoffset: 100;
+        stroke-linecap: square;
+        stroke-width: $rating-stroke-width;
+        transition: all 1.2s cubic-bezier(.99, .01, .62, .94);
+      }
+      .under-50 {
+        stroke: $red;
+      }
+      .under-80 {
+        stroke: $yellow;
+      }
+      .over-80 {
+        stroke: $green;
+      }
+    }
+    #walk-score1,
+    #transit-score1,
+    #bike-score1 {
+      position: absolute;
+      width: $size;
+      color: black;
+      bottom: $size * .14;
+      font-size: $size * .17;
+      text-align: center;
+    }
+    
+  }
