@@ -26,87 +26,73 @@
 </div>
 <br>
 <div style="text-align: center">
-  <div class="panel-group" id="firstpannel" onclick="myFunction(this.id)" >
-    <div class="panel panel-default" >
-      <div class="panel-heading" >
-        <h4 class="panel-title" >
-          <div data-toggle="collapse" data-target="#collapse1" >
-            <span>Abonment S </span>
-            <span>10 </span><span>€/month</span>
-          </div>
-        </h4>
-        <div id="collapse1" class="panel-collapse collapse" >
-          <div class="panel-heading">
-            <hr>
-            <span>200 min.</span>
-            <span>1.5 GB </span>
-            <span>Data Pass</span>
-          </div>
-        </div>             
+  <div id="accordion">
+    <div class="card" [ngClass]="!toggleMenu ? 'card' : 'card-yellow'">
+      <div class="card-header" id="headingone">
+        <div data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1"  (click)="toggle()">
+          <span>Abonment S </span>
+          <span>10 </span><span>€/month</span>
+        </div>
       </div>
+      <div  class="collapse" id="collapse1" aria-labelledby="headingone" data-parent="#accordion">
+        <div class="card-header">
+        
+          <span>200 min.</span>
+          <span>1.5 GB </span>
+          <span>Data Pass</span>
+        </div>
+      </div>             
     </div>
-  </div>
-  <br>
-  <div class="panel-group" id="secondpannel" onclick="myFunction(this.id)">
-    <div class="panel panel-default">    
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <div data-toggle="collapse" data-target="#collapse2">
-            <span>Abonment M </span>
-            <span>20 </span><span>€/month</span>
-          </div>
-        </h4>
-        <div id="collapse2" class="panel-collapse collapse">
-          <div class="panel-heading"><hr>
-            <span>300 min.</span>
-            <span>3 GB </span>
-            <span>Data Pass</span>
-          </div> 
+    <br>
+    <div class="card" [ngClass]="!toggleMenu2 ? 'card' : 'card-yellow'">
+      <div class="card-header" id="headingtwo">
+        <div data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2" (click)="toggle2()">
+          <span>Abonment M </span>
+          <span>20 </span><span>€/month</span>
+        </div>
+      </div>
+      <div class="collapse" id="collapse2" aria-labelledby="headingtwo" data-parent="#accordion">
+        <div class="card-header">
+          <span>300 min.</span>
+          <span>3 GB </span>
+          <span>Data Pass</span>
         </div>           
       </div>
     </div>
-  </div>
-  <br>
-  <div class="panel-group" id="thirdpannel" onclick="myFunction(this.id)">
-    <div class="panel panel-default">   
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <div data-toggle="collapse" data-target="#collapse3">
-            <span>Abonment L </span>
-            <span>30 </span><span>€/month</span>
-          </div>
-        </h4>
-        <div id="collapse3" class="panel-collapse collapse">
-          <div class="panel-heading"><hr>
-            <span>400 min.</span>
-            <span>5 GB </span>
-            <span>Data Pass</span>
-          </div>
-        </div>              
+    <br>
+    <div class="card" [ngClass]="!toggleMenu3 ? 'card' : 'card-yellow'">
+      <div class="card-header" id="headingthree">
+        <div data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3" (click)="toggle3()">
+          <span>Abonment L </span>
+          <span>30 </span><span>€/month</span>
+        </div>
       </div>
+      <div class="collapse" id="collapse3" aria-labelledby="headingthree" data-parent="#accordion">
+        <div class="card-header">
+          <span>400 min.</span>
+          <span>5 GB </span>
+          <span>Data Pass</span>
+        </div>
+      </div>              
+    </div>
+    <br>
+    <div class="card" [ngClass]="!toggleMenu4 ? 'card' : 'card-yellow'">
+      <div class="card-header" id="headingfourth">
+        <div data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4" (click)="toggle4()">
+          <span>Abonment XL </span>
+          <span>40 </span><span>€/month</span>
+        </div>
+      </div>
+      <div class="collapse" id="collapse4" aria-labelledby="headingfourth" data-parent="#accordion">
+        <div class="card-header">
+          <span>500 min.</span>
+          <span>7 GB </span>
+          <span>Data Pass</span>
+        </div> 
+      </div>           
     </div>
   </div>
-  <br>
-  <div class="panel-group" id="forthpannel" onclick="myFunction(this.id)">
-    <div class="panel panel-default"> 
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <div data-toggle="collapse" data-target="#collapse4">
-            <span>Abonment XL </span>
-            <span>40 </span><span>€/month</span>
-          </div>
-        </h4>
-        <div id="collapse4" class="panel-collapse collapse">
-          <div class="panel-heading"><hr>
-            <span>500 min.</span>
-            <span>7 GB </span>
-            <span>Data Pass</span>
-          </div> 
-        </div>           
-      </div>
-    </div>
-  </div>
-</div> 
+</div>
 <br>
 <div style="text-align: center">
   <span class="fa fa-angle-double-down" ></span>
@@ -129,87 +115,34 @@
       <span class="fo" >Average for the</span>
       <span class="o" >last 3 months</span>
       <span class="fo" >with dolphin</span>
-    </div>
-    <div class="row" >
-      <div class="rating-container" style="text-align: center">
-        <div class="col-xs-4" >
-          <div class="walk-container">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34" preserveAspectRatio="xMinYMin meet">
-              <circle cx="16" cy="16" r="15.9155" class="rating-progress-background" />
-              <circle cx="16" cy="16" r="15.9155" class="rating-progress js-rating-progress" />
-            </svg><span style="margin-left: 10%">minutes</span>
-            <div class="walk-text"><a href="#">132</a></div>
-            <div id="walk-score"></div>
-          </div>
-        </div> 
-        <div class="col-xs-4" >
-          <div class="transit-container">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34" preserveAspectRatio="xMinYMin meet">
-              <circle cx="16" cy="16" r="15.9155" class="rating-progress-background" />
-              <circle cx="16" cy="16" r="15.9155" class="rating-progress js-rating-progress" />
-            </svg><span style="margin-left: 14%">SMS</span>
-            <div class="transit-text"><a href="#">3</a></div>
-            <div id="transit-score"></div>
-          </div>
-        </div>
-        <div class="col-xs-4" >
-          <div class="bike-container">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34" preserveAspectRatio="xMinYMin meet">
-              <circle cx="16" cy="16" r="15.9155" class="rating-progress-background" />
-              <circle cx="16" cy="16" r="15.9155" class="rating-progress js-rating-progress" />
-            </svg><span style="margin-left: 16%">Data</span>
-            <div class="bike-text"><a href="#">2.8GB</a></div>
-            <div id="bike-score"></div>
-          </div>
-        </div>
-      </div>  
-    </div> 
-    <br>  
-    <div style="text-align: center">
+    </div><br>
+<div class="flex-wrapper">
+    <div class="single-chart"><app-circular-progress [value] = "yourValue1"></app-circular-progress></div>
+    <div class="single-chart"><app-circular-progress [value] = "yourValue2"></app-circular-progress></div>
+    <div class="single-chart"><app-circular-progress [value] = "yourValue3"></app-circular-progress></div>
+</div>
+<br>  
+  <div style="text-align: center">
     <span class="fa fa-angle-double-down" ></span>
-    </div>
-    <div style="text-align: center">
+  </div>
+  <div style="text-align: center">
       <span class="fo" >My</span>
       <span class="o" > new</span>
       <span class="fo" > consumption with abonnement</span>
       <span class="o" > M</span>
-    </div>
-    <div class="row" >
-      <div class="rating-container1" style="text-align: center">
-        <div class="col-xs-4" >
-          <div class="walk-container1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34">
-              <circle cx="16" cy="16" r="15.9155" class="rating-progress-background1" />
-              <circle cx="16" cy="16" r="15.9155" class="rating-progress1 js-rating-progress1" />
-            </svg><span style="margin-left: 10%">minutes</span>
-            <div class="walk-text1"><a href="#">132</a></div>
-            <div id="walk-score1"></div>
-          </div>
-        </div> 
-        <div class="col-xs-4" >
-          <div class="transit-container1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34">
-              <circle cx="16" cy="16" r="15.9155" class="rating-progress-background1" />
-              <circle cx="16" cy="16" r="15.9155" class="rating-progress1 js-rating-progress1" />
-            </svg><span style="margin-left: 14%">SMS</span>
-            <div class="transit-text1"><a href="#">3</a></div>
-            <div id="transit-score1"></div>
-          </div>
-        </div>
-        <div class="col-xs-4" >
-          <div class="bike-container1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34">
-              <circle cx="16" cy="16" r="15.9155" class="rating-progress-background1" />
-              <circle cx="16" cy="16" r="15.9155" class="rating-progress1 js-rating-progress1" />
-            </svg><span style="margin-left: 16%">Data</span>
-            <div class="bike-text1"><a href="#">2.8GB</a></div>
-            <div id="bike-score1"></div>
-          </div>
-        </div>
-      </div>  
-    </div> 
-    <div style="text-align: center">
-      <button type="button" class="btn bt2" >OK, I change now</button>
-    </div>
+  </div>
+  <br>
+  <div class="flex-wrapper">
+      <div class="single-chart"><app-circular-progress [value] = "yourValue4"></app-circular-progress></div>
+      <div class="single-chart"><app-circular-progress [value] = "yourValue5"></app-circular-progress></div>
+      <div class="single-chart"><app-circular-progress [value] = "yourValue6"></app-circular-progress></div>
+    </div>  
+  <div style="text-align: center">
+    <button type="button" class="btn bt2" >OK, I change now</button>
   </div>
 </div>
+</div>
+
+
+
+
