@@ -1,4 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { HttpErrorResponse } from '@angular/common/http';
 
 
 @Component({
@@ -20,12 +22,19 @@ export class AppComponent {
     toggle3(){ this.toggleMenu3 = !this.toggleMenu3; }
     toggle4(){ this.toggleMenu4 = !this.toggleMenu4; }
 
-    yourValue1 = 60;
-    yourValue2 = 50;
-    yourValue3 = 90;
-    yourValue4 = 40;
-    yourValue5 = 60;
-    yourValue6 = 90;
+    arrName: number[];
+    msg:string;
+
+    constructor(private httpService: HttpClient){
+        this.httpService.get('./assets/data.json').subscribe(
+          data=>{
+            this.arrName = data as number[];
+          },
+          (err:HttpErrorResponse) => {
+            this.msg = "File not Found";
+          }
+        );
+    }
   
   ngOnInit(): void {
      

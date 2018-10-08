@@ -116,10 +116,9 @@
       <span class="o" >last 3 months</span>
       <span class="fo" >with dolphin</span>
     </div><br>
-<div class="flex-wrapper">
-    <div class="single-chart"><app-circular-progress [value] = "yourValue1"></app-circular-progress></div>
-    <div class="single-chart"><app-circular-progress [value] = "yourValue2"></app-circular-progress></div>
-    <div class="single-chart"><app-circular-progress [value] = "yourValue3"></app-circular-progress></div>
+<div class="flex-wrapper" *ngIf="arrName">
+    <div class="single-chart" *ngFor="let val of arrName | slice : 0:3"><app-circular-progress [value] = val.yourValue></app-circular-progress></div>
+    
 </div>
 <br>  
   <div style="text-align: center">
@@ -133,9 +132,7 @@
   </div>
   <br>
   <div class="flex-wrapper">
-      <div class="single-chart"><app-circular-progress [value] = "yourValue4"></app-circular-progress></div>
-      <div class="single-chart"><app-circular-progress [value] = "yourValue5"></app-circular-progress></div>
-      <div class="single-chart"><app-circular-progress [value] = "yourValue6"></app-circular-progress></div>
+      <div class="single-chart" *ngFor="let val of arrName | slice : 3:6"><app-circular-progress [value] = val.yourValue></app-circular-progress></div>
     </div>  
   <div style="text-align: center">
     <button type="button" class="btn bt2" >OK, I change now</button>

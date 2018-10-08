@@ -17,7 +17,7 @@ export class CircularProgressComponent implements OnInit {
   ngOnInit(): void {
     
     if (Number(this.value) > 0 && Number(this.value) <= 50) {
-      this.cssprop = 'circular-chart orange';
+      this.cssprop = 'circular-chart green';
       this.strokes =  this.value +' ,'+100;
     }
     else if(Number(this.value) > 50 && Number(this.value) < 80) {
@@ -25,7 +25,7 @@ export class CircularProgressComponent implements OnInit {
       this.strokes =  this.value +' ,'+100;
     }
     else if(Number(this.value) > 80 && Number(this.value) < 100) {
-      this.cssprop = 'circular-chart green';
+      this.cssprop = 'circular-chart red';
       this.strokes =  this.value +' ,'+100;
     }  
   }
