@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Demo
 
-[DEMO](https://qgnizjpl.github.stackblitz.io/)
+[DEMO](https://xorioavx.github.stackblitz.io/)
 
 ## Code scaffolding
 
