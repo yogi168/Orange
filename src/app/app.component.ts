@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpErrorResponse } from '@angular/common/http';
 
@@ -10,12 +10,16 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class AppComponent {
 
+  public text_al:boolean = false;
+
   public toggleMenu:boolean = false;
   public toggleMenu2:boolean = false;
   public toggleMenu3:boolean = false;
   public toggleMenu4:boolean = false;
   
     title = 'orange';
+    isMiddleDivVisible: boolean = false;
+    public innerWidth: any;
 
     toggle(){ this.toggleMenu = !this.toggleMenu; }
     toggle2(){ this.toggleMenu2 = !this.toggleMenu2; }
@@ -35,9 +39,22 @@ export class AppComponent {
           }
         );
     }
+    @HostListener('window:resize', ['$event'])
+onResize(event) {
+  const innerWidth = event.target.innerWidth;
+  //  console.log(innerWidth);
+  if(innerWidth <= 770){
+    // console.log("hello");
+    this.isMiddleDivVisible=true;
+    this.text_al=true;
+  }else{
+    this.isMiddleDivVisible=false;
+    this.text_al=false;
+  }
+}
   
   ngOnInit(): void {
-     
+        
   }
   
 }

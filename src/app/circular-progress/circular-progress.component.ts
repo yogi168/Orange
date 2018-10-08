@@ -21,7 +21,7 @@ export class CircularProgressComponent implements OnInit {
       this.strokes =  this.value +' ,'+100;
     }
     else if(Number(this.value) > 50 && Number(this.value) < 80) {
-      this.cssprop = 'circular-chart blue';
+      this.cssprop = 'circular-chart yellow';
       this.strokes =  this.value +' ,'+100;
     }
     else if(Number(this.value) > 80 && Number(this.value) < 100) {

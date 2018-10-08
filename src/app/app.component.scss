@@ -7,10 +7,20 @@
    position: relative;
   }
     .box{
-	background-color: #333;
+	background-color: #000000;
     height: 150px;
     width: 110% ;
 	margin-bottom: 10px;  
+  }
+
+  .cont1{
+    padding-right: 5%;
+	padding-left: 5%;
+  }
+
+  .cont{
+    padding-right: 5%;
+	padding-left: 5%;
   }
 
   .logo{
@@ -20,7 +30,7 @@
     right: 5%;
     text-align: center;
     height: 40%;
-    background-color: rgba(253, 194, 0, 0.966);
+    background-color: #FFCC00;
     top: 117px;
     z-index: 20;
     line-height: 0.7em;
@@ -31,7 +41,14 @@
 	background-color: black;
   color:white;
   width: 46%;
+  text-align: center;
   }
+
+  .bt1-orange{
+    background-color: #FF7900;
+    color:white;
+    width: 46%;
+    }
   
   .fo,.w{
 	font-weight: bolder;
@@ -39,7 +56,7 @@
   }
   
   .o{
-	color: rgb(221, 133, 0);
+	color: #FF7900;
 	font-weight: bolder;
 	font-size: 190%;
   }
@@ -56,42 +73,43 @@
   }
   
   .fo1{
-	color: rgb(221, 133, 0);
+	color: #FF7900;
 	font-weight: bolder;
 	font-size: 250%;
   }
   
-  .a1{
-	color: rgb(221, 133, 0);
-	line-height: 0.1;
-	font-size: 190%;
-	margin-left: 5%;
-	font-weight: bold;
-  }
-  
   .a2{
 	color: rgb(250, 245, 243);
-	font-size: 250%;
+	line-height: 0.8 ;
+	font-size: 190%;
+	margin-left: 5%;
+  font-weight: bold;
+  padding-bottom: -3%;
+  }
+  
+  .a1{
+	color: #FF7900;
+	font-size: 120%;
     margin-left: 5%;
-    line-height: 0.8;
+    line-height: 0.4 !important;
   }
   
   .fi-lightbulb{
 	font-size: 4.5rem;
   }
   .card{
-	text-align:center;
-	width:20em;
-	margin: 0 auto;
-	border-left: 5px solid grey;
+	text-align:left !important;
+	width:100%;
+	//margin: 0 auto;
+	border-left: 9px solid grey;
 	
   }
   
   .card-yellow{
-  text-align:center;
-	width:20em;
-	margin: 0 auto;
-	border-left: 5px solid rgba(253, 194, 0, 0.966);
+  text-align:left;
+	width:100%;
+	//margin: 0 auto;
+	border-left: 9px solid #FFCC00;
   }
   span{
 	font-weight: bold;
@@ -102,7 +120,7 @@
   }
   
   .fullWidth1 {
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     max-width: initial;
@@ -111,14 +129,14 @@
 
    .box1{
     background-color: rgb(255, 255, 255);
-    height: 700px;
+    height: 500px;
     width: 100%
     /* margin-bottom: 10px;  */
     }
 
     
   .bt2{
-    background-color: rgb(221, 133, 0);
+    background-color: #FF7900;
     color:white;
     width: 50%;
     top: 97%;
@@ -135,4 +153,11 @@
     .flex-wrapper{
       display: flex;
       flex-flow: row nowrap;
+    }
+
+    .text-ali{
+      text-align: center;
+    }
+    .text-ali-nil{
+      text-align: left;
     }
